@@ -3,6 +3,7 @@ import "./App.css";
 import React, { Component } from "react";
 import Circle from "./Circle";
 import { circles } from "./circles";
+import GameOverPopUp from "./GameOverPopUp";
 const getRndInteger = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
@@ -10,6 +11,7 @@ class App extends Component {
   state = {
     score: 0,
     current: 0,
+    gameOver: false,
   };
   timer = undefined;
   pace = 1500;
@@ -34,6 +36,9 @@ class App extends Component {
     this.nextCircle();
   };
   stopHandler = () => {
+    this.setState({
+      gameOver: true,
+    });
     clearTimeout(this.timer);
   };
   render() {
@@ -50,10 +55,12 @@ class App extends Component {
                 id={c.id}
                 color={c.color}
                 click={this.clickHandler}
+                active={this.state.current === c.id}
               />
             ))}
           </div>
-          <div>
+          {this.state.gameOver && <GameOverPopUp score={this.state.score} />}
+          <div className="buttons">
             <button onClick={this.startHandler}>Start</button>
             <button onClick={this.stopHandler}>Stop</button>
           </div>

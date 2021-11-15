@@ -62,7 +62,40 @@ h1 {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.active {
+  box-shadow: 0 0 5px snow;
+  border: 25px solid rgb(79, 17, 85);
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buttons {
+  align-items: center;
+  display: inline-block;
+  justify-content: center;
+  margin: 1rem;
+}
+.popUpDiv {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background-color: white;
+  box-shadow: 0 0 5px #333;
+  padding: 3rem;
+  padding-bottom: 6rem;
+  margin: 0 auto;
+  text-align: center;
+}
 .App-link {
   color: #61dafb;
 }
