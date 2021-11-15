@@ -1,12 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
 .App {
   text-align: center;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+body {
+  margin: 0;
+  padding: 5rem;
+  align-items: center;
+  font-family: "Special Elite", cursive;
+  background-image: linear-gradient(to right, orange, yellow);
+}
+.circles {
+  display: flex;
+  justify-content: space-evenly;
+}
 
+.circle {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 1rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: white;
+  background-color: greenyellow;
+}
+button {
+  font-family: "Special Elite", cursive;
+  padding: 0.8rem 2rem;
+  border: none;
+  background-color: wheat;
+  margin: 1rem;
+}
+h1 {
+  font-family: "Special Elite", cursive;
+  margin: 2rem auto;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
