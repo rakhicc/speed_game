@@ -20,7 +20,8 @@ body {
 }
 .circles {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .circle {
@@ -34,7 +35,13 @@ body {
   border-radius: 50%;
   color: white;
   background-color: greenyellow;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgb(72, 72, 72);
 }
+.circle:active {
+  box-shadow: inset 0 0 40px rgb(96, 96, 96);
+}
+
 button {
   font-family: "Special Elite", cursive;
   padding: 0.8rem 2rem;
@@ -64,7 +71,9 @@ h1 {
 }
 .active {
   box-shadow: 0 0 5px snow;
-  border: 25px solid rgb(79, 17, 85);
+  border: 5px solid rgba(79, 17, 85, 0.849);
+  background-image: url("assets/images/grin.png");
+  background-size: 100%;
 }
 .overlay {
   position: fixed;

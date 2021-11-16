@@ -4,6 +4,12 @@ import React, { Component } from "react";
 import Circle from "./Circle";
 import { circles } from "./circles";
 import GameOverPopUp from "./GameOverPopUp";
+import stopSound from "./assets/sounds/stop.mp3";
+import gameStartSound from "./assets/sounds/start.mp3";
+import mouseClickSound from "./assets/sounds/Mouse-Click.mp3";
+let startSound = new Audio(gameStartSound);
+let gameEndSound = new Audio(stopSound);
+let clickSound = new Audio(mouseClickSound);
 const getRndInteger = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
@@ -19,6 +25,7 @@ class App extends Component {
   timer = undefined;
 
   clickHandler = (id) => {
+    clickSound.play();
     console.log("you clicked on", id);
     if (this.state.current !== id) {
       this.stopHandler();
@@ -48,12 +55,15 @@ class App extends Component {
     this.timer = setTimeout(this.nextCircle, this.state.pace);
   };
   startHandler = () => {
+    startSound.play();
     this.nextCircle();
     this.setState({
       didGameStart: true,
     });
   };
   stopHandler = () => {
+    gameEndSound.play();
+    startSound.pause();
     this.setState({
       gameOver: true,
       didGameStart: false,
@@ -84,6 +94,7 @@ class App extends Component {
                 color={c.color}
                 click={() => this.clickHandler(c.id)}
                 active={this.state.current === c.id}
+                disabled={this.state.didGameStart}
               />
             ))}
           </div>
