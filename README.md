@@ -9,4 +9,4 @@
 
 - ![screenshot of the app](speedgame.png)
 - ![screenshot of game over pop up](popup.png)
-- ![screenshot of game landing page when start button is pressed](popup.png)
+- ![screenshot of game landing page when start button is pressed](finalscreenshot.png)
