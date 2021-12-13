@@ -82,7 +82,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Speed Game</h1>
+        <h1>Catch the smileys</h1>
 
         <p>Your Score : {this.state.score}</p>
         <div>

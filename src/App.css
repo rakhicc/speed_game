@@ -42,16 +42,18 @@ body {
   box-shadow: inset 0 0 40px rgb(96, 96, 96);
 }
 
-button {
-  font-family: "Special Elite", cursive;
-  padding: 0.8rem 2rem;
-  border: none;
-  background-color: wheat;
-  margin: 1rem;
-}
+
 h1 {
   font-family: "Special Elite", cursive;
+  margin: 5rem auto;
+  text-align: center;
+  font-size: 5rem;
+}
+p {
+  font-family: "Special Elite", cursive;
   margin: 2rem auto;
+  text-align: center;
+  font-size: 3rem;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -88,9 +90,21 @@ h1 {
 }
 .buttons {
   align-items: center;
-  display: inline-block;
+  /* display: grid; */
   justify-content: center;
   margin: 1rem;
+  margin-top: 2rem;
+  margin-left: 35vw;
+}
+button {
+  font-family: "Special Elite", cursive;
+  padding: 0.8rem 2rem;
+  border: none;
+  background-color: wheat;
+  margin: 1rem;
+  font-size: 2rem;
+  align-content: center;
+  display: inline-block;
 }
 .popUpDiv {
   position: relative;
